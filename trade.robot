@@ -21,7 +21,7 @@ Enter into trading view website and check whether search functionality is workin
    Verify the functionality of search button by entering text in search bar
 
 *Keywords*
-Start tradeview web testing
+Start tradeview webtesting
    Open Browser   about:blank     ${BROWSER}
    Maximize browser window
   
@@ -38,7 +38,7 @@ Verify the functionality of search button by entering text in search bar
     Input Text   ${name}   ${text}
     Click Button  ${enter} 
     Sleep   10s
-Complete tradeview web testing
+Complete tradeview webtesting
     Close Browser
 
 
