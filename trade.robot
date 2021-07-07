@@ -10,7 +10,7 @@ ${link}     link=Features
 ${search}   xpath=/html/body/div[2]/div[3]/div/div[2]/div[1]/div/button
 ${name}     name=query
 ${enter}    xpath=//button[@type='submit']
-${text}      Reliance
+${text}      Tata motors
 
 *Test Cases*
 Enter into trading view website and check whether search functionality is working fine
