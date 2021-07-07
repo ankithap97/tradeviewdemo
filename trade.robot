@@ -1,7 +1,7 @@
 *Settings*
 Library   SeleniumLibrary
-Suite Setup  Start tradeview web testing
-Suite Teardown  Complete tradeview web testing
+Suite Setup  Start tradeview webtesting
+Suite Teardown  Complete tradeview webtesting
 
 *Variables*
 ${BROWSER}  Chrome
