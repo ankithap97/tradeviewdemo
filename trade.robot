@@ -1,7 +1,7 @@
 *Settings*
 Library   SeleniumLibrary
 Resource  ..\Resources\variable.robot 
-Resource   ..\Resources\Keywords.robot
+Resource   ..\Resources\keywords.robot
 Suite Setup  Start tradeview web testing
 Suite Teardown  Complete tradeview web testing
 
