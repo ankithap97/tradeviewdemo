@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210707 09:23:25.172" rpa="false" schemaversion="2">
+<suite id="s1" name="Trade" source="C:\Users\Al Muzdhar Computers\demo1\trade.robot">
+<kw name="Start tradeview web testing" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210707 09:23:25.630" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210707 09:23:25.630" endtime="20210707 09:23:29.068"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210707 09:23:29.068" endtime="20210707 09:23:29.192"/>
+</kw>
+<status status="PASS" starttime="20210707 09:23:25.630" endtime="20210707 09:23:29.193"/>
+</kw>
+<test id="s1-t1" name="Enter into trading view website and check whether search functionality is working fine">
+<kw name="Enter the url in the browser">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210707 09:23:29.198" level="INFO">Opening url 'https://in.tradingview.com/ideas/tradeview/'</msg>
+<status status="PASS" starttime="20210707 09:23:29.196" endtime="20210707 09:23:34.093"/>
+</kw>
+<status status="PASS" starttime="20210707 09:23:29.195" endtime="20210707 09:23:34.094"/>
+</kw>
+<kw name="Verify if the user is in the url's home page">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Start free trial</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210707 09:23:34.123" level="INFO">Current page contains text 'Start free trial'.</msg>
+<status status="PASS" starttime="20210707 09:23:34.096" endtime="20210707 09:23:34.123"/>
+</kw>
+<status status="PASS" starttime="20210707 09:23:34.095" endtime="20210707 09:23:34.123"/>
+</kw>
+<kw name="Verify if user is able to scroll down the page">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${link}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210707 09:23:34.124" endtime="20210707 09:23:34.481"/>
+</kw>
+<status status="PASS" starttime="20210707 09:23:34.124" endtime="20210707 09:23:34.481"/>
+</kw>
+<kw name="Verify the search button by clicking on it">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${search}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210707 09:23:34.483" level="INFO">Clicking button 'xpath=/html/body/div[2]/div[3]/div/div[2]/div[1]/div/button'.</msg>
+<status status="PASS" starttime="20210707 09:23:34.483" endtime="20210707 09:23:34.575"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210707 09:23:39.581" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210707 09:23:34.575" endtime="20210707 09:23:39.581"/>
+</kw>
+<status status="PASS" starttime="20210707 09:23:34.481" endtime="20210707 09:23:39.581"/>
+</kw>
+<kw name="Verify the functionality of search button by entering text in search bar">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${name}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210707 09:23:39.586" level="INFO">Typing text 'Reliance' into text field 'name=query'.</msg>
+<status status="PASS" starttime="20210707 09:23:39.581" endtime="20210707 09:23:39.890"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${enter}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210707 09:23:39.890" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20210707 09:23:39.890" endtime="20210707 09:23:52.365"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210707 09:24:02.368" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210707 09:23:52.366" endtime="20210707 09:24:02.368"/>
+</kw>
+<status status="PASS" starttime="20210707 09:23:39.581" endtime="20210707 09:24:02.370"/>
+</kw>
+<status status="PASS" starttime="20210707 09:23:29.193" endtime="20210707 09:24:02.374"/>
+</test>
+<kw name="Complete tradeview web testing" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210707 09:24:02.399" endtime="20210707 09:24:04.829"/>
+</kw>
+<status status="PASS" starttime="20210707 09:24:02.399" endtime="20210707 09:24:04.830"/>
+</kw>
+<status status="PASS" starttime="20210707 09:23:25.176" endtime="20210707 09:24:04.830"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Trade">Trade</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
